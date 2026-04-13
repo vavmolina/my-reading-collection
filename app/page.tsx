@@ -1,6 +1,7 @@
 import { client } from '@/lib/sanity'
 import { booksQuery } from '@/lib/queries'
 import YearFilter from './SidebarFilter'
+import InfoBubble from './InfoBubble'
 
 interface Book {
   _id: string
@@ -32,7 +33,7 @@ export default async function Home() {
           min-height: 100vh;
           background-color: #FAF7F2;
           font-family: var(--font-serif);
-          padding: 60px 90px;
+          padding: 20px 80px 80px;
         }
 
         /* Top heading section */
@@ -40,6 +41,7 @@ export default async function Home() {
           margin-bottom: 48px;
           padding-bottom: 32px;
           border-bottom: 1px solid #E8DDD0;
+          width: 100%;
         }
 
         .eyebrow {
@@ -54,16 +56,16 @@ export default async function Home() {
         .heading {
           font-size: 42px;
           font-weight: 400;
-          color: #2C1A0E;
+          color: #3d3d3d;
           margin: 0 0 16px;
           line-height: 1.2;
         }
 
         .divider {
-          width: 40px;
-          height: 2px;
-          background-color: #A0856C;
-          margin-bottom: 16px;
+          width: 100%;
+          height: 1px;
+          background-color: #E8DDD0;
+          margin: 0;
         }
 
         .subtext {
@@ -107,7 +109,7 @@ export default async function Home() {
 
         @media (max-width: 1024px) {
           .page {
-            padding: 48px 48px;
+            padding: 48px 60px;
           }
 
           .content {
@@ -137,7 +139,7 @@ export default async function Home() {
 
         @media (max-width: 640px) {
           .page {
-            padding: 36px 24px;
+            padding: 36px 20px;
           }
 
           .heading {
@@ -153,15 +155,27 @@ export default async function Home() {
       `}</style>
 
       <div className="page">
+      
+      <InfoBubble /> 
 
         {/* Top Header */}
         <div className="page-header">
-          <p className="eyebrow">Personal Collection</p>
+          <img
+            src="https://framerusercontent.com/images/T18QsRBY2m9ZiT4MrrLHIkryl0.png"
+            alt="Vhinny Molina"
+            style={{
+              width: '40px',
+              height: 'fit',
+              objectFit: 'cover',
+              marginBottom: '80px',
+            }}
+          />
+          {/* <p className="eyebrow">Personal Collection</p> */}
           <h1 className="heading">vhinny's library</h1>
-          <div className="divider" />
-          <p className="subtext">
+          {/* <div className="divider" /> */}
+          {/* <p className="subtext">
             {books.length} {books.length === 1 ? 'book' : 'books'} read
-          </p>
+          </p> */}
         </div>
 
         {/* Filter + Books */}

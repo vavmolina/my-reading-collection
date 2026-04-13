@@ -66,7 +66,7 @@ export default function BookCard({ book }: { book: Book }) {
         <div style={{ display: 'flex', gap: '2px', marginBottom: '8px' }}>
           {Array.from({ length: 5 }, (_, i) => (
             <span key={i} style={{
-              fontSize: '18px',
+              fontSize: '20px',
               fontFamily: 'var(--font-mono)',
               color: i < book.rating ? '#A0856C' : '#D9CDBF'
             }}>★</span>
