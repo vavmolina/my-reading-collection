@@ -21,7 +21,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'My Reading List',
+  title: 'vhinny reads',
   description: 'Personal book collection',
 }
 
